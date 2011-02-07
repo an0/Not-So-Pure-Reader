@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Na Wong, Ling Wang</string>
+	<key>CFBundleDisplayName</key>
+	<string>No So Pure Reader</string>
+	<key>CFBundleIdentifier</key>
+	<string>me.wangling.safari.notsopurereader</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict/>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>reader.js</string>
+			</array>
+		</dict>
+		<key>Stylesheets</key>
+		<array>
+			<string>reader.css</string>
+		</array>
+		<key>Whitelist</key>
+		<array>
+			<string>http://*.google.com/reader/*</string>
+			<string>https://*.google.com/reader/*</string>
+			<string>http://*.google.ca/reader/*</string>
+			<string>https://*.google.ca/reader/*</string>
+			<string>http://*.google.de/reader/*</string>
+			<string>https://*.google.de/reader/*</string>
+			<string>http://*.google.co.uk/reader/*</string>
+			<string>https://*.google.co.uk/reader/*</string>
+			<string>http://*.google.nl/reader/*</string>
+			<string>https://*.google.nl/reader/*</string>
+			<string>http://*.google.ch/reader/*</string>
+			<string>https://*.google.ch/reader/*</string>
+			<string>http://*.google.at/reader/*</string>
+			<string>https://*.google.at/reader/*</string>
+			<string>http://*.google.fr/reader/*</string>
+			<string>https://*.google.fr/reader/*</string>
+			<string>http://*.google.it/reader/*</string>
+			<string>https://*.google.it/reader/*</string>
+			<string>http://*.google.es/reader/*</string>
+			<string>https://*.google.es/reader/*</string>
+			<string>http://*.google.ca/reader/*</string>
+			<string>https://*.google.ca/reader/*</string>
+			<string>http://*.google.com.au/reader/*</string>
+			<string>https://*.google.com.au/reader/*</string>
+			<string>http://*.google.ru/reader/*</string>
+			<string>https://*.google.ru/reader/*</string>
+			<string>http://*.google.mx/reader/*</string>
+			<string>https://*.google.mx/reader/*</string>
+			<string>http://*.google.com.hk/reader/*</string>
+			<string>https://*.google.com.hk/reader/*</string>
+			<string>http://*.google.com.tw/reader/*</string>
+			<string>https://*.google.com.tw/reader/*</string>
+			<string>http://*.google.co.jp/reader/*</string>
+			<string>https://*.google.co.jp/reader/*</string>
+			<string>http://*.google.cn/reader/*</string>
+			<string>https://*.google.cn/reader/*</string>
+			<string>http://*.google.co.in/reader/*</string>
+			<string>https://*.google.co.in/reader/*</string>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string>Restyled Google Reader to make it usable.</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Allowed Domains</key>
+			<array>
+				<string>*.google.com</string>
+				<string>*.google.ca</string>
+				<string>*.google.de</string>
+				<string>*.google.co.uk</string>
+				<string>*.google.nl</string>
+				<string>*.google.ch</string>
+				<string>*.google.at</string>
+				<string>*.google.fr</string>
+				<string>*.google.it</string>
+				<string>*.google.es</string>
+				<string>*.google.ca</string>
+				<string>*.google.com.au</string>
+				<string>*.google.ru</string>
+				<string>*.google.mx</string>
+				<string>*.google.com.hk</string>
+				<string>*.google.com.tw</string>
+				<string>*.google.co.jp</string>
+				<string>*.google.cn</string>
+				<string>*.google.co.in</string>
+			</array>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>Some</string>
+		</dict>
+	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://wangling.me/safari/update.plist</string>
+	<key>Website</key>
+	<string>http://wangling.me/safari/</string>
+</dict>
+</plist>
