@@ -1,3 +1,7 @@
+/* Utility functions */
+Element.prototype.hasClass = function(className) { return this.className.split(" ").indexOf(className) != -1; }
+
+
 /* Move search box to nav */
 var searchBar = document.getElementById("search");
 var nav = document.getElementById("nav");
@@ -5,11 +9,11 @@ nav.insertBefore(searchBar, nav.firstChile);
 
 var searchBox = document.getElementById("search-input");
 searchBox.type = "search";
-searchBox.onkeypress = function (e) { e.stopPropagation() };
+searchBox.onkeypress = function(e) { e.stopPropagation() };
 
 /* Add goto icon after blog title when expanding current entry */
 function addGotoIcon(entry, collapsed) {
-	if (collapsed && collapsed.className == "collapsed" && entry.id == "current-entry" && entry.className.indexOf("expanded") != -1) {
+	if (collapsed && collapsed.className == "collapsed" && entry.id == "current-entry" && entry.hasClass("expanded")) {
 		var entryMain = null;
 		for (var i = 0; i < collapsed.childNodes.length; ++i) {
 			if (collapsed.childNodes[i].className == "entry-main") {
@@ -23,8 +27,8 @@ function addGotoIcon(entry, collapsed) {
 		for (var i = 0; i < entryMain.childNodes.length; ++i) {			
 			if (entryMain.childNodes[i].className == "entry-source-title") {
 				entrySource = entryMain.childNodes[i];
-				break;					
-			}			
+				break;
+			}
 		}
 		if (!entrySource) return;
 
@@ -76,6 +80,9 @@ function addGotoIcon(entry, collapsed) {
 			}
 		}
 		if (!gotoLink) return;
+
+		// Remove entry-source-title-parent.
+		entryAuthor.removeChild(gotoLink.parentNode);
 		
 		// Margin between source title and goto icon.
 		var marginFiller = document.createTextNode(" ");
@@ -89,21 +96,22 @@ function addGotoIcon(entry, collapsed) {
 	}
 }
 
-document.addEventListener("click", function (e) {
+document.addEventListener("click", function(e) {
 	var target = e.target;
 	while (target) {
 		if (target.tagName == "DIV" && target.className == "collapsed")
 			break;
 		target = target.parentNode;
 	}
-
+	if (!target) return;
+	
 	var entry = target.parentNode;
 	var collapsed = target;
 	addGotoIcon(entry, collapsed);
 }, false);
 
 
-document.addEventListener("keypress", function (e) {
+document.addEventListener("keypress", function(e) {
 	if (!(e.keyCode == 13 || e.keyCode == 32 || e.keyCode == 106 || e.keyCode == 111)) return;
 	
 	var entry = document.getElementById("current-entry");
@@ -117,7 +125,7 @@ document.addEventListener("keypress", function (e) {
 	}
 
 	// The "expanded" class has not yet been attached/detached when the keypress event is caught.
-	if (entry.className.indexOf("expanded") != -1) return;
+	if (entry.hasClass("expanded")) return;
 
 	var collapsed = null;
 	for (var i = 0; i < entry.childNodes.length; ++i) {
@@ -131,14 +139,14 @@ document.addEventListener("keypress", function (e) {
 	// addGotoIcon(entry, collapsed);
 
 	// Monitor the class attribute change.
-	// entry.addEventListener("DOMAttrModified", function (e) {
-	// 	if (e.relatedNode == this && e.attrName == "class" && e.newValue.indexOf("expanded") != -1) {
+	// entry.addEventListener("DOMAttrModified", function(e) {
+	// 	if (e.relatedNode == this && e.attrName == "class" && this.hasClass("expanded")) {
 	// 		addGotoIcon(entry, collapsed);
 	// 		this.removeEventListener("DOMAttrModified", arguments.callee, false);
 	// 	}
 	// }, false);
-	var intervalID =  window.setInterval(function () {
-		if (entry.className.indexOf("expanded") != -1) {
+	var intervalID =  window.setInterval(function() {
+		if (entry.hasClass("expanded")) {
 			window.clearInterval(intervalID);
 			addGotoIcon(entry, collapsed);
 		}
