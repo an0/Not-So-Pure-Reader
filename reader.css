@@ -1160,9 +1160,12 @@ div#entries.single-source.cards div#current-entry div.card-content h2.entry-titl
 }
 h2.entry-title a{
 	color: rgb(46, 46, 45) !important;
-	/*	font-size: 24px;*/
 	line-height: 28px;
 	font-weight: 500 !important;
+}
+div#current-entry.read h2.entry-title a{
+	color: rgb(86, 86, 85) !important;
+	font-weight: 400 !important;
 }
 div#current-entry h2.entry-title{
 	opacity: 1 !important;
@@ -1177,7 +1180,7 @@ div.entry-main{
 	overflow: hidden !important;
 }
 div.entry-author{
-	font-size: 16px !important;
+	font-size: 13px !important;
 }
 .state-stream div.entry-author div.entry-via{
 	display: none !important;
@@ -1186,7 +1189,7 @@ div.single-source.cards div.entry-author{
 	display: none !important;
 }
 span.entry-author-parent{
-	display: none !important;
+/*	display: none !important;*/
 	font-style: italic !important;
 }
 div.card-actions{
@@ -1409,6 +1412,7 @@ div.collapsed span.entry-source-title{
 	height: 24px !important;
 	width: auto !important;
 	text-indent: 1px !important;
+	z-index: 100 !important;
 }
 div.collapsed h2.entry-title{
 	display: block !important;
@@ -1422,7 +1426,7 @@ div.collapsed h2.entry-title{
 	font-weight: 400 !important;
 	color: rgb(44,42,40) !important;
 }
-div.read div.collapsed h2.entry-title{
+div.read h2.entry-title{
 	color: rgb(144,142,140) !important;
 }
 div.single-source div.collapsed div.entry-icons div.item-star-active,
@@ -1551,10 +1555,10 @@ div.created div.entry-body{
 	background: transparent !important;
 }
 div#entries.list div.expanded div.entry-author .entry-source-title-parent {
-	display: none !important;
+/*	display: none !important;*/
 }
 div#entries.list div.expanded h2.entry-title{
-	margin-bottom: 1em !important;
+	margin-bottom: 0.5em !important;
 }
 div.entry-annotation{
 	padding: 22px 18px !important;
@@ -1566,7 +1570,6 @@ div.entry-annotation div.entry-annotation-body{
 	line-height: 20px !important;
 	font-size: 14px !important;
 	color: rgb(102,100,100) !important;
-	font-style: italic !important;
 }
 /* @end */
 
@@ -1666,7 +1669,6 @@ div#chrome-header span#chrome-title a{
 div.collapsed h2.entry-title,
 div.single-source div.collapsed h2.entry-title,
 div#home div#overview span.item-title,
-.entry .entry-body blockquote,
 div#home div#overview span.overview-item-link,
 .entry .entry-body{
 	/*font-family: "Georgia","Palatino",serif !important;*/
@@ -1675,6 +1677,7 @@ div#home div#overview span.overview-item-link,
 div.entry-annotation div.entry-annotation-body,
 .entry .entry-body blockquote{
 	font-family: "Georgia","Palatino",serif !important;
+	font-style: italic !important;
 }
 div#chrome-header span#chrome-title a{
 	font-size: 14px;
@@ -1684,7 +1687,7 @@ div#chrome-header span#chrome-title a{
 /*	font-size: 16px !important;	*/
 	line-height: 1.75em !important;
 	color: rgb(100,100,100) !important;
-/*	font-weight: 400 !important;*/
+	font-weight: 400 !important;
 	text-shadow: rgb(255,255,255) 0 1px 0;
 }
 div#home div#overview span.overview-item-link{
@@ -1703,9 +1706,6 @@ div.entry-container div.entry-date{
 	font-size: 11px !important;
 	text-transform: uppercase;
 /*font-style: italic !important;*/
-}
-.entry .entry-body blockquote{
-	font-style: italic !important;
 }
 div#home div#overview span.item-title{
 	font-size: 18px !important;
@@ -2118,4 +2118,20 @@ div#entries.cards div.card div.entry-author .entry-likers .link {
 /* Tags */
 .user-tags-list a {
 	color: #646464 !important;	
+}
+
+/* Goto Icon after blog title */
+a.goto {
+	display: none;	
+}
+
+.expanded a.goto {
+	display: inline;
+	vertical-align: middle;
+	opacity: 0;
+	-webkit-transition: opacity 400ms;
+}
+
+.expanded .collapsed:hover a.goto {
+	opacity: 1;
 }
