@@ -1629,8 +1629,6 @@ div#tips,
 div#lhn-selectors-menubutton,
 div#guser nobr:nth-child(1) :nth-child(6),
 div.collapsed a.entry-original,
-/*span.like.link,*/
-/*span.star.link,*/
 div#chrome-header span#chrome-title a span,
 div#viewer-details-toggle,
 div.entry-title-go-to,
@@ -1983,7 +1981,8 @@ div.arr,
 span.item-link,
 #mark-all-as-read-options,
 div#chrome-lhn-toggle-icon,
-div.star,
+.star,
+span.tag,
 span.read-state,
 span.email,
 span.broadcast-with-note,
@@ -2003,13 +2002,19 @@ span.broadcast-inactive,
 	background-position: -14px -143px !important;	
 }
 span.item-link,
+span.star,
+span.like,
 span.broadcast-inactive,
 span.broadcast-active,
 span.broadcast-with-note,
 span.email,
+span.tag,
 span.read-state{
 	width: 14px !important;
 	padding-left: 18px !important;
+}
+span.broadcast {
+	margin-left: 8px !important;
 }
 span.broadcast-inactive{
 	background-position: 0px -7px !important;
@@ -2038,15 +2043,31 @@ span.read-state-kept-unread{
 	margin-left: 8px;
 	background-position: 0px -117px !important;
 }
-div.star{
+.star{
 	width: 16px !important;
 	height: 16px !important;
 }
-div.item-star.empty{
+div.item-star{
 	background-position: 0px -160px !important;
 }
 div.item-star-active{
 	background-position: -17px -160px !important;
+}
+span.star {
+	background-image: url(star.png) !important;
+}
+span.item-star{
+	background-position: 0px 0px !important;	
+}
+span.item-star-active{
+	background-position: 0px -16px !important;	
+}
+span.tag {
+	margin-left: 8px !important;
+	background: url(tag.png) no-repeat !important;
+}
+span.like {
+	margin-left: 8px !important;
 }
 div#chrome-lhn-toggle-icon{
 	width: 12px !important;
