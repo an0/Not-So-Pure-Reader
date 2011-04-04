@@ -21,17 +21,17 @@ div#message-area-outer div{
 	text-transform: uppercase !important;
 	margin-top: 0px !important;
 }
-div#guser nobr a,
-div#guser nobr a u,
+div#gb a,
 div#message-area-outer div a{
 	color:rgb(150, 150, 150) !important;
 	text-decoration: none !important;
 	-webkit-transition-duration:400ms;
 }
-div#guser nobr a:hover,
+div#gb a:hover,
 div#message-area-outer div a:hover{
 	color:rgb(180, 180, 180) !important;
 	text-decoration: none !important;
+	background: none !important;
 }
 
 div#loading-area div.message-area-text-container,
@@ -66,29 +66,11 @@ div.goog-menu{
 div#stream-prefs-menu-menu{
 	top: 55px !important;
 }
-
-div#guser nobr .gbm{
-	position: absolute !important;
-	top: 20px !important;
-	width: auto !important;
-	padding: 0 !important;
-	margin: 0 !important;
-}
-div#guser nobr #gbg{
-	right: 62px !important;
-}
-div#guser nobr #gb2{
-	right: 142px !important;
-}
-
-div#guser nobr .gbm a,
-div#guser nobr .gbm b{
-	padding:0 !important;
-	margin:0 !important;
+div#gb .gbm a {
 	color: rgb(30,30,30) !important;
 	-webkit-transition-duration:0 !important;
 }
-div#guser nobr .gbm,
+div#gb .gbm,
 div.goog-menu{
 	border: 1px solid rgb(255,255,255) !important;
 	border-radius:4px !important;
@@ -97,12 +79,10 @@ div.goog-menu{
 	z-index:1009 !important;
 /*display: block !important;*/
 }
-div#guser nobr .gbm .gb2,
 div.goog-menu .goog-menuitem-content{
 	line-height: 24px !important;
 	margin: 0 6px !important;
 }
-div#guser nobr .gbm .gb2,
 div.goog-menu .goog-menuitem{
 	padding: 0 18px 0 20px !important;
 }
@@ -111,17 +91,15 @@ div.goog-menuitem-content span.goog-submenu-arrow{
 	margin-right: 6px !important;
 	font-size: 10px !important;
 }
-.gbm .gb2:first-child,
 div.goog-menu .goog-menuitem:first-child{
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
 }
-.gbm .gb2:last-child,
 div.goog-menu .goog-menuitem:last-child{
 	border-bottom-left-radius:4px;
 	border-bottom-right-radius:4px;
 }
-div#guser nobr .gbm a.gb2:hover,
+div#gb .gbm a:hover,
 div.goog-menuitem-highlight,
 div.goog-menu .goog-menuitem:hover{
 	background: -webkit-gradient(
@@ -518,7 +496,7 @@ span#chrome-view-links span#view-search{
 /* @end */
 
 /* @group Nav */
-div#guser{
+div#gb{
 	display: block !important;
 	background: -webkit-gradient(
 		linear,
@@ -535,24 +513,49 @@ div#guser{
 	position: relative !important;
 	padding-bottom: 0 !important;
 }
-div#guser nobr{
+div#gb #gbz {
+	display: none !important;
+}
+div#gb #gbg .gbtb2 {
+	display: none !important;
+}
+div#gb #gbg li.gbt {
+	border: 0 !important;
+}
+div#gb #gbg li.gbt a {
+	border: 0 !important;
+}
+div#gb #gbg .gbma {
+	display: none !important;
+}
+div#gb #gbg .gbtcb {
+	display: none !important;
+}
+div#gb #gbx1,
+div#gb #gbx2,
+div#gb #gbx3,
+div#gb #gbx4 {
+	display: none !important;
+}
+div#gb #gbg li.gbt {
 	opacity: 0;
 	-webkit-transition-duration:500ms;
-	position: relative;
-	font-size: 12px;
-	top: 2px;
-	color:rgba(255,255,255,0) !important;
 }
-div#guser nobr b{
-	color: rgb(240, 238, 236) !important;
-	font-weight: 400 !important;
-	font-size: 12px !important;	
-}
-div#guser:hover nobr{
+div#gb:hover #gbg li.gbt {
 	opacity: 1;
 }
-div#guser nobr a{
-	margin: 0 2px !important;
+div#gb .gbto .gbts {
+	color:rgb(180, 180, 180) !important;
+}
+#gbg5 #gbi5 {
+	background-position: 0px -20px !important;
+	opacity:.8;
+}
+#gbg5 #gbi5:hover {
+	opacity:1;
+}
+.gbto #gbg5 #gbi5{
+	opacity:1;
 }
 div#nav > div:nth-child(2){
 	position: fixed !important;
@@ -1627,7 +1630,6 @@ div.tree-item-action-container,
 div#team-messages,
 div#tips,
 div#lhn-selectors-menubutton,
-div#guser nobr:nth-child(1) :nth-child(6),
 div.collapsed a.entry-original,
 div#chrome-header span#chrome-title a span,
 div#viewer-details-toggle,
