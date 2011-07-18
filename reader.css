@@ -70,7 +70,6 @@ div#gb .gbm a {
 	color: rgb(30,30,30) !important;
 	-webkit-transition-duration:0 !important;
 }
-div#gb .gbm,
 div.goog-menu{
 	border: 1px solid rgb(255,255,255) !important;
 	border-radius:4px !important;
@@ -548,13 +547,14 @@ div#gb .gbto .gbts {
 	color:rgb(180, 180, 180) !important;
 }
 #gbg5 #gbi5 {
-	background-position: 0px -20px !important;
+	background-position: 0px 0px !important;
 	opacity:.8;
 }
 #gbg5 #gbi5:hover {
 	opacity:1;
 }
 .gbto #gbg5 #gbi5{
+	background-position: -6px -22px !important;
 	opacity:1;
 }
 div#nav > div:nth-child(2){
@@ -920,8 +920,11 @@ div#lhn-friends .folder a{
 
 
 /* @group Home & Main */
+div#top-bar{
+	height: 0 !important;
+}
 div#main{
-	top: 30px !important;
+	top: 0px !important;
 }
 div#lhn-add-subscription-section{
 	position: absolute;
